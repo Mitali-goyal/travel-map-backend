@@ -11,7 +11,7 @@ dotenv.config();
 app.use(express.json());
 
 app.use(cors({
-  origin: ["https://travel-map-backend-pi.vercel.app"],
+  origin: ["https://travel-map-orpin.vercel.app"],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true,
 }));
