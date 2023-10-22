@@ -12,8 +12,11 @@ app.use(express.json());
 
 app.get("/status", (request, response) => {
    const status = {
-      "0Status": "Running"
+      "Status": "Running"
    };
+
+   response.send(status);
+});
 
 app.use(cors({
   origin: ["https://travel-map-orpin.vercel.app"],
