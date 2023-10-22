@@ -7,7 +7,7 @@ router.get("/", async (req, res) => {
   try {
     //find user
     console.log('inside get users')
-    const user = await User.findAll();
+    const user = await User.find();
     console.log('user: ', user)
     //send response
     res.status(200).json(user);
