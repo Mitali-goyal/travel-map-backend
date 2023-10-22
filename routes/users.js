@@ -2,6 +2,21 @@ const User = require("../models/User");
 const router = require("express").Router();
 const bcrypt = require("bcrypt");
 
+//LOGIN
+router.get("/", async (req, res) => {
+  try {
+    //find user
+    console.log('inside get users')
+    const user = await User.findAll();
+    console.log('user: ', user)
+    //send response
+    res.status(200).json(user);
+  } catch (err) {
+    console.log("error in get users api: ", err)
+    res.status(500).json(err);
+  }
+});
+ 
 //REGISTER
 router.post("/register", async (req, res) => {
   try {
