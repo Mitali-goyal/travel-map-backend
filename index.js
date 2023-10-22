@@ -12,7 +12,7 @@ app.use(express.json());
 
 app.get("/status", (request, response) => {
    const status = {
-      “Status”: “Running”
+      "0Status": "Running"
    };
 
 app.use(cors({
